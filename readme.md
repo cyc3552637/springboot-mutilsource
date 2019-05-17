@@ -2,7 +2,7 @@
   
 springboot+druid+mybatis+mysql+mongodb+redis  
   
-三数据源，关系型数据库双数据源，redis作为关系型数据库的缓存库，mongodb单独数据源
+三数据源，关系型数据库双数据源，mongodb单独数据源
 
 # datasource多数据源  
   
