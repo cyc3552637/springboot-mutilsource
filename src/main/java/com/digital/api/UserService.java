@@ -14,6 +14,8 @@ import com.digital.entity.UserEntity;
 
 
 public interface UserService {
-    public String query(@RequestParam("name") String name);
+    public String queryBySqlone(@RequestParam("name") String name);
+    public String queryBySqltwo(@RequestParam("name") String name);
+    public String  queryByMongo(@RequestParam("name") String name);
 
 }

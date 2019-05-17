@@ -25,8 +25,8 @@ public class RpcClientController {
     private static Logger log=LoggerFactory.getLogger(RpcClientController.class);
     @Autowired
     UserService userservice;
-    @RequestMapping(value = "/useraction")
-    public String userAction(HttpServletRequest request,@RequestParam(value="name",required=false) String name){  //拦截用户发送的/useraction请求
+    @RequestMapping(value = "/useractionsqlone")
+    public String userActionsqlone(HttpServletRequest request,@RequestParam(value="name",required=false) String name){  //拦截用户发送的/useraction请求
 
         if(name==null){
             log.info("namenull");
@@ -34,8 +34,29 @@ public class RpcClientController {
         else{
             log.info(name);
         }
-        return userservice.query(name);
+        return userservice.queryBySqlone(name);
     }
+    @RequestMapping(value = "/useractionsqltwo")
+    public String userActionsqltwo(HttpServletRequest request,@RequestParam(value="name",required=false) String name){  //拦截用户发送的/useraction请求
 
+        if(name==null){
+            log.info("namenull");
+        }
+        else{
+            log.info(name);
+        }
+        return userservice.queryBySqltwo(name);
+    }
+    @RequestMapping(value = "/useractionmongo")
+    public String userActionmongo(HttpServletRequest request,@RequestParam(value="name",required=false) String name){  //拦截用户发送的/useraction请求
+
+        if(name==null){
+            log.info("namenull");
+        }
+        else{
+            log.info(name);
+        }
+        return userservice.queryByMongo(name);
+    }
 
 }
