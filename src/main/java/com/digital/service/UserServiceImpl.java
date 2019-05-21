@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 
     @Value("${server.port}")
     String port;
-//    @DataSourceAnnotation(DataSourceNames.ONE)
+    @DataSourceAnnotation(DataSourceNames.ONE)
     public String queryBySqlone(String name) {
         // TODO Auto-generated method stub
         List list=userdao.querySqlone(name);
