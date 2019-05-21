@@ -1,5 +1,6 @@
 package com.digital.api;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,5 +18,6 @@ public interface UserService {
     public String queryBySqlone(@RequestParam("name") String name);
     public String queryBySqltwo(@RequestParam("name") String name);
     public String  queryByMongo(@RequestParam("name") String name);
+    public  byte[]  queryByMongoImage(@RequestParam(value = "fileName", required = true) String fileName) throws IOException;
 
 }

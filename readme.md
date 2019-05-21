@@ -10,6 +10,6 @@ druid+datasource多数据源，可以两个关系型数据库自主切换，并�
  
 # spring-data mongodb 
   
-使用spring-data连接mongodb，单独处理mongodb的数据  
+使用spring-data连接mongodb，单独处理mongodb的数据，同时支持DB和GridFS 
   
   
